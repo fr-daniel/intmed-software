@@ -27,20 +27,24 @@ cd backend/
 
 source venv/bin/activate
 
-python /medicar/manage.py makemigrations
+cd medicar
 
-python /medicar/manage.py migrate
+pip install requirements.txt
+
+python manage.py makemigrations
+
+python manage.py migrate
 
 ```
 
 Caso queira criar um usuário administrador, execute:
 
 ```sh
-python /medicar/manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 Para rodar o sistema, execute:
 
 ```
-python /medicar/manage.py runserver
+python manage.py runserver
 ```

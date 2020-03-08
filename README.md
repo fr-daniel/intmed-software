@@ -12,15 +12,15 @@ As instruções a seguir apresentam como rodar o projeto em sua máquina.
 
 É preciso ter o Python e o NodeJs e NPM instalados.
 
-### Inicialização
-
 Clone o repositório:
 
 ```sh
 git clone https://github.com/fr-daniel/intmed-software.git && cd intmed-software/medicar
 ```
 
-Para iniciar o backend excute os seguintes comndos:
+### Inicialização Backend
+
+Para iniciar o backend excute os seguintes comandos:
 
 ```sh
 cd backend/
@@ -47,4 +47,14 @@ Para rodar o sistema, execute:
 
 ```
 python manage.py runserver
+```
+
+### Inicialização Backend
+
+Para iniciar o frontend excute os seguintes comandos:
+
+```sh
+cd fronted/
+
+ng serve --open
 ```

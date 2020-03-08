@@ -1,0 +1,107 @@
+div.form {
+  display: block;
+  text-align: center;
+}
+form {
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+}
+
+.form-control {
+  /* Rectangle 4 */
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+  padding-left: 15px;
+  margin: 10px 0;
+  /* White */
+  background-color: #ffffff;
+  /* Gray 2 */
+  border: 1px solid #a8a8a8;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #a8a8a8;
+}
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a8a8a8;
+}
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #a8a8a8;
+}
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #a8a8a8;
+}
+
+.btn-cancel {
+  width: 180px;
+  height: 40px;
+
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #49b4bb;
+}
+
+.btn-confirma {
+  width: 180px;
+  height: 40px;
+
+  background: #49b4bb;
+  border: none;
+  border-radius: 8px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #444444;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

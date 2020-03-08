@@ -49,7 +49,7 @@ Para rodar o sistema, execute:
 python manage.py runserver
 ```
 
-### Inicialização Backend
+### Inicialização Frontend
 
 Para iniciar o frontend excute os seguintes comandos:
 

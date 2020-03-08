@@ -51,6 +51,8 @@ python manage.py runserver
 
 ### Inicialização Frontend
 
+#### Frontend está incompleto e não funcional
+
 Para iniciar o frontend excute os seguintes comandos:
 
 ```sh

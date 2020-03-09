@@ -36,7 +36,6 @@ GET /api/usuarios/
     "id": 5,
     "email": "email@mail.com",
     "nome": "Nome Usuário",
-    "password": "pbkdf2_sha256$180000$ddd$clnfMxSDs7omMngUZbMdiwiuHSSQASOqHTBNdFthDqUVU="
 }
 ```
 

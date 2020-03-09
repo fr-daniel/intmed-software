@@ -1,1 +1,24 @@
-<p>consulta-form works!</p>
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <p>Nova Consulta</p>
+
+    <form [formGroup]="novaConsultaForm" (ngSubmit)="onSubmit()">
+    <select class="form-control" (change)="changeEspecialidade($event)" formControlName="especialidadeName">
+      <option value="" disabled selected>Especialidade</option>
+      <option *ngFor="let especialidade of especialidades" [ngValue]="especialidade">{{especialidade.nome}}</option>
+    </select>
+
+    <select class="form-control" formControlName="medicoName">
+      <option value="" disabled selected>Médico</option>
+      <option *ngFor="let medico of medicos" [ngValue]="medico">{{medico.nome}}</option>
+    </select>
+
+    <div class="form-buttons-box">
+      <button routerLink="/consultas" class="btn btn-cancel">Cancelar</button>
+      <button type="submit" class="btn btn-confirma">Confirmar</button>
+    </div>
+    </form>
+  </div>
+
+</div>

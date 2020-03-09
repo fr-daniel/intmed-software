@@ -1,23 +1,21 @@
-<div class="container" >
+<div class="container">
   <img src="assets/img/logo.png" alt="Medicar" class="logo">
 
   <form class="form-box" #loginForm="ngForm" (ngSubmit)="onSubmit()">
     <div>
       <input type="email" name="email" [(ngModel)]="loginData.email" required placeholder="Email" class="input-control">
-
     </div>
     <div>
-      <input type="password" name="password" [(ngModel)]="loginData.password" required placeholder="Senha" class="input-control">
+      <input type="password" name="password" [(ngModel)]="loginData.password" required placeholder="Senha"
+        class="input-control">
     </div>
     <div class="save-password">
-      <input type="checkbox" id="c1" class="input-control-checkbox"/>
+      <input type="checkbox" id="c1" class="input-control-checkbox" />
       <label for="c1"> Lembrar minha senha</label>
-   </div>
+    </div>
 
     <div class="form-buttons-box">
-      <button class="btn btn-link">
-        Criar Conta
-      </button>
+      <button routerLink="/cadastro" class="btn btn-link">Criar Conta</button>
       <button [disabled]="!loginForm.form.valid" class="btn btn-primary">
         Acessar
       </button>

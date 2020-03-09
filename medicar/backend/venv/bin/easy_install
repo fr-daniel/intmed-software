@@ -1,4 +1,4 @@
-#!/home/daniel/intmed-software/backend/venv/bin/python
+#!/home/daniel/intmed-software/medicar/backend/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

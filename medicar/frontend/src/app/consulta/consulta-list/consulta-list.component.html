@@ -1,1 +1,46 @@
-<p>consulta-list works!</p>
+<div class="container">
+  <div class="nav-bar">
+    <h1><img src="assets/img/logo.png" alt="Medicar"></h1>
+
+    <div class="navbar-items">
+      <div class="navbar-item">
+        <p class="text-secondary">{{nome}}</p>
+      </div>
+      <div class="navbar-item">
+        <p class="text-primary" (click)="logout()">Desconectar</p>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+
+  <div class="main-header">
+    <h2>Consulta Clínica</h2>
+
+    <button type="button" class="btn btn-primary"><img src="assets/img/add.svg" alt=""> Nova Consulta</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Especialidade</th>
+        <th>Profissional</th>
+        <th>Data</th>
+        <th>Hora</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let consulta of consultas">
+        <td>{{consulta.medico.especialidade.nome}}</td>
+        <td>{{consulta.medico.nome}}</td>
+        <td>{{consulta.dia | date:'d/MM/y'}}</td>
+        <td>{{consulta.horario}}</td>
+        <td><button type="button" class="text-primary desmarcar" (click)="desmarcar(consulta)">Desmarcar</button></td>
+      </tr>
+      <tr *ngIf="consultas.length == 0">
+        <td colspan="6">Nenhuma consulta agendada</td>
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+</div>

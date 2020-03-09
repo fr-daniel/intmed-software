@@ -131,3 +131,7 @@ body {
   margin: 0;
   font-family: Roboto, sans-serif;
 }
+
+*:focus {
+  outline: 0 !important;
+}

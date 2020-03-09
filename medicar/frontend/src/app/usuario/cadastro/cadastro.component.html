@@ -1,19 +1,23 @@
-<div>
-<img src="" alt="" srcset="">
+<div class="container">
+  <div class="form-login">
+    <img src="assets/img/logo.png" alt="Medicar" class="logo">
 
-<p>Crie sua conta</p>
+    <p>Crie sua conta</p>
 
-<form (ngSubmit)="onSubmit()">
-  <input type="text" class="form-control" placeholder="Nome">
-  <input type="email" class="form-control" placeholder="Email">
-  <div class="input-box">
-    <input type="password" class="form-control" placeholder="Senhass">
+    <form #cadastroForm="ngForm" (ngSubmit)="onSubmit()">
+      <input type="text" name="nome" [(ngModel)]="cadastroData.nome" required class="form-control" placeholder="Nome">
+      <input type="email" name="email" [(ngModel)]="cadastroData.email" required class="form-control"
+        placeholder="Email">
+      <input type="password" name="password" [(ngModel)]="cadastroData.password" required class="form-control"
+        placeholder="Senhas">
+      <input type="password" name="confirm_password" [(ngModel)]="cadastroData.confirm_password" required
+        class="form-control" placeholder="Confirmar Senha">
+
+      <div class="form-buttons-box">
+        <button routerLink="/login" class="btn btn-cancel">Cancelar</button>
+        <button type="submit" [disabled]="!cadastroForm.form.valid" class="btn btn-confirma">Confirmar</button>
+      </div>
+    </form>
   </div>
-  <input type="password" class="form-control" placeholder="Confirmar Senha">
 
-  <div class="buttons">
-    <button type="button" class="btn-cancel">Cancelar</button>
-
-    <button type="submit" class="btn-confirma">Confirmar</button>
-  </div>
-</form></div>
+</div>

@@ -25,11 +25,13 @@ Para iniciar o backend excute os seguintes comandos:
 ```sh
 cd backend/
 
+virtualenv venv
+
 source venv/bin/activate
 
 cd medicar
 
-pip install requirements.txt
+pip install -r requirements.txt 
 
 python manage.py makemigrations
 
@@ -51,12 +53,14 @@ python manage.py runserver
 
 ### Inicialização Frontend
 
-#### Frontend está incompleto e não funcional
-
 Para iniciar o frontend excute os seguintes comandos:
 
 ```sh
 cd fronted/
+
+npm install
+
+npm install -g @angular/cli
 
 ng serve --open
 ```

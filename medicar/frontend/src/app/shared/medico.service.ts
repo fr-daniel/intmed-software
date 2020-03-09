@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 
 import { environment } from "src/environments/environment";
 import { Observable } from "rxjs";
-import { Medico } from "../core/model";
+import { Medico, Especialidade } from "../core/model";
 
 @Injectable({
   providedIn: "root"
@@ -15,7 +15,16 @@ export class MedicoService {
     this.medicosUrl = `${environment.apiUrl}/medicos/`;
   }
 
-  listar(): Observable<Medico[]> {
-    return this.http.get<Medico[]>(`${this.medicosUrl}`);
+  listar(especialidade: Especialidade): Observable<Medico[]> {
+    const options = especialidade
+      ? {
+          params: new HttpParams().set(
+            "especialidade",
+            especialidade.id.toString()
+          )
+        }
+      : {};
+
+    return this.http.get<Medico[]>(`${this.medicosUrl}`, options);
   }
 }

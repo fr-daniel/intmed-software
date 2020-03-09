@@ -11,8 +11,8 @@ import { MedicoService } from "src/app/shared/medico.service";
 })
 export class ConsultaFormComponent implements OnInit {
   novaConsultaForm = this.fb.group({
-    especialidadeName: [""],
-    medicoName: [""]
+    especialidade: [""],
+    medico: [""]
   });
 
   especialidades: Especialidade[];
@@ -33,6 +33,9 @@ export class ConsultaFormComponent implements OnInit {
   onSubmit() {}
 
   changeEspecialidade(e) {
-    this.medicoService.listar().subscribe(medicos => (this.medicos = medicos));
+    const especialidade = this.novaConsultaForm.get("especialidade").value;
+    this.medicoService
+      .listar(especialidade)
+      .subscribe(medicos => (this.medicos = medicos));
   }
 }

@@ -4,12 +4,12 @@
     <p>Nova Consulta</p>
 
     <form [formGroup]="novaConsultaForm" (ngSubmit)="onSubmit()">
-    <select class="form-control" (change)="changeEspecialidade($event)" formControlName="especialidadeName">
+    <select class="form-control" (change)="changeEspecialidade($event)" formControlName="especialidade">
       <option value="" disabled selected>Especialidade</option>
       <option *ngFor="let especialidade of especialidades" [ngValue]="especialidade">{{especialidade.nome}}</option>
     </select>
 
-    <select class="form-control" formControlName="medicoName">
+    <select class="form-control" formControlName="medico">
       <option value="" disabled selected>Médico</option>
       <option *ngFor="let medico of medicos" [ngValue]="medico">{{medico.nome}}</option>
     </select>

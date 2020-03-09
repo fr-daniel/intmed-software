@@ -51,6 +51,8 @@ Para rodar o sistema, execute:
 python manage.py runserver
 ```
 
+Outras instruções para o uso da API: [seção](medicar/backend/README.md)
+
 ### Inicialização Frontend
 
 Para iniciar o frontend excute os seguintes comandos:
